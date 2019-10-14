@@ -75,6 +75,29 @@
         </div>
     </div>
 </div>
+  <script type="text/javascript">
+          
+           $(document).ready(function(){        
+            $('#age').keypress(function(e) {
+                var a = [];
+                var k = e.which;
 
+               // alert(k);
+
+                for (i = 48; i < 58; i++)
+                    a.push(i);
+
+                if (!(a.indexOf(k)>=0)){
+                    e.preventDefault();
+                  $('#age').css("background-color","red");
+                }
+                else{
+                  $('#age').css("background-color","white");
+                }
+
+            });
+        }) ;
+     
+  </script>
 </body>
 </html>

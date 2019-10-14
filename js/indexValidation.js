@@ -6,10 +6,16 @@ var name=$('#name').val();
 var designation=$('#designation').val();
 
 var age=$('#age').val();
-
+if(age=="")
+{
+	alert("please enter age");
+	return false;
+}
+/*var b = isNaN(typeof(age));
 var len = name.length;
+alert(!isNaN(typeof(age)));
 
-if(!Number.isNaN(age)) {alert("Not A Number"); return false;}
+	if(b == false) {alert("Not A Number"); return false;}*/
 
 if(name.trim() == '' || len<2 ){
            alert("Please Enter Valid or Full Name");
@@ -21,17 +27,12 @@ if(designation.trim()=='' || designation.strlen()<4){
            return false;
 }
 
-/*
-if(ageI){
-           alert("Please Age");
-           return false;
-}
 
 if(age < 18 || age >70){
            alert("You are Not Eligible For This Position");
            return false;
 }
-*/
+
 
 return true;
 

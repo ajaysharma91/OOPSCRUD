@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Select2 Tutor
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="select2-4.0.6/dist/css/select2.min.css">
+	<script type="text/javascript" src="select2-4.0.6/dist/js/select2.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+</head>
+
+<body>
+<select id="select1" style="width: 150px; margin:2px;">
+	<option></option>
+	<option>ajay</option>
+	<option>ram</option>
+	<option>krishna</option>
+	<option>vishnu</option>
+
+</select>
+<select id="select2" style="width: 150px; margin:2px;">
+	<option>select the option</option>
+	<option>kailash</option>
+	<option>rameshwar</option>
+	<option>gopaldas</option>
+	<option>charanjeet</option>
+
+</select>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert("hello");
+		//alert('hello');
+		/*$('#select1').select2({
+            placeholder: "Hit Enter After Selection",
+            width: 'resolve'
+        });*/
+        $("#select1").select2({
+    placeholder: "Select a state",
+    allowClear: true
+});
+	})
+</script>
+</body>
+</html>

@@ -49,9 +49,12 @@
     <table class="table mt-3 pl-3 " id="userTable">
   <thead>
     <tr>
+      <th scope="col">Emp.Id</th>
       <th scope="col">Name</th>
       <th scope="col">Designation</th>
       <th scope="col">Age</th>
+       <th scope="col">Contact</th>
+      <th scope="col">Pincode</th>
     </tr>
   </thead>
   <tbody>
@@ -75,11 +78,13 @@
   <?php	} 
   } ?> -->
 
-  <tr>
+  <!-- <tr>
     <td><span id="name"></span></td>
     <td><span id="designation"></span></td>
     <td><span id="age"></span></td>
-  </tr>
+    <td><span id="Contact"></span></td>
+    <td><span id="PinCode"></span></td>
+  </tr> -->
    
   </tbody>
 </table>
@@ -99,16 +104,20 @@
       success:function(response){
         var l = response.length;
         for (var i = 0; i < l; i++) {
-           var id = response[i].id;
+              var id = response[i].id;
                 var name = response[i].name;
                 var designation = response[i].designation;
                 var age = response[i].age;
+                 var fulladdress = response[i].fulladdress;
+                var pincode = response[i].pincode;
 
           var tr_str = "<tr>" +
-                   // "<td >" + (i+1) + "</td>" +
+                    "<td >" + (i+1) + "</td>" +
                     "<td >" + name + "</td>" +
                     "<td >" + designation + "</td>" +
                     "<td >" + age + "</td>" +
+                    "<td >" + fulladdress + "</td>" +
+                    "<td >" + pincode + "</td>" +
                     "</tr>";
 
                 $("#userTable tbody").append(tr_str);
